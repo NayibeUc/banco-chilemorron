@@ -15,7 +15,7 @@
 #your-card-holder{
   color: #b84cb7;
   font-family: 'Changa One', sans-serif;
-  font-size: 32px;
+  font-size: 40px;
   text-align: center;
 
 }
@@ -27,6 +27,7 @@
   text-transform: uppercase;
   font-family: 'Fredoka', sans-serif;
   letter-spacing: 1px;
+
 }
 
 /* Estilo para la mascota del banner */
@@ -53,6 +54,8 @@
   padding: 40px;
   box-sizing: border-box;
 }
+
+
 
 /* =========================================================
    3. VISUALIZACIÓN DE LA TARJETA (TDC)
@@ -89,7 +92,7 @@
 
 /* Estilos de colores dinámicos según el tipo */
 .Estándar { background-color: #ff4d4d; color: white; }
-.Gold { background-color: #ffd700; color: black; }
+.Gold { background-color: #baa00c; color: black; }
 .Platino { 
   background: linear-gradient(135deg, #e5e4e2 0%, #ffd700 100%); 
   color: #333;
@@ -153,10 +156,11 @@ select {
   border: 2px solid transparent;
   border-radius: 8px;
   padding: 12px;
-  width: 100%;
+  width: 95%;
   margin-top: 5px;
   outline: none;
   transition: 0.3s;
+  box-sizing: border-box;
 }
 
 input:focus {
