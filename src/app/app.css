@@ -12,6 +12,14 @@
   border-bottom: 2px solid #f7bfd8;
 }
 
+#your-card-holder{
+  color: #b84cb7;
+  font-family: 'Changa One', sans-serif;
+  font-size: 32px;
+  text-align: center;
+
+}
+
 .banner-banco h1 {
   color: #ef98ad;
   font-size: clamp(1.5rem, 5vw, 2.8rem); /* Tamaño fluido según la pantalla */
@@ -161,6 +169,12 @@ label {
   font-weight: bold;
   margin-top: 15px;
   color: #333;
+}
+
+
+
+p, label{
+  font-family: 'Poppins', sans-serif;
 }
 
 /* =========================================================

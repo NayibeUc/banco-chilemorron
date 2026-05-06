@@ -5,7 +5,7 @@
 <header class="banner-banco">
   <h1>Banco chilemorron</h1>
 
-  <img src="assets/imagendearriba.webp" class="mascota-banner" alt="Cinnamoroll">
+  <img src="imagendearriba.webp" class="mascota-banner" alt="Cinnamoroll">
 </header>
 
 <div class="main-container">
@@ -15,7 +15,7 @@
        Aquí se muestra la tarjeta que cambia de color en tiempo real.
        ========================================================= -->
   <section class="card-section">
-    <h2 style="text-align: center; color: #333;">TU TARJETA</h2>
+    <h2 id="your-card-holder">TU TARJETA</h2>
     
     <!-- [ngClass] aplica la clase (Estándar, Gold o Platino) según la elección. -->
     <div class="tarjeta-fisica" [ngClass]="tipoTDC">
@@ -26,7 +26,7 @@
       </div>
       
       <!-- Logo del banco dentro de la tarjeta -->
-      <img src="assets/logo.png" class="logo-tarjeta" alt="Logo Banco">
+      <img src="logo_banco_cinamorroll.svg" class="logo-tarjeta" alt="Logo Banco">
 
       <div class="datos-cliente">
         <!-- El nombre y apellido se actualizan mientras el usuario escribe -->
@@ -68,7 +68,7 @@
   <section class="form-section">
     <div class="form-card">
       <h2 style="margin-top: 0;">REGISTRO PARA LA TARJETA</h2>
-      <p>Bienvendio! la tarjeta CHILEMORRON esta disponible para ti. Nos entusiasma que quieras unirte a nuestra familia 
+      <p>Bienvenido! La tarjeta CHILEMORRON esta disponible para ti. Nos entusiasma que quieras unirte a nuestra familia 
          de clientes. Por favor, completa el siguiente formulario con tus datos personales para que podamos procesar tu solicitud de manera rápida y eficiente. Recuerda que los campos marcados con * son obligatorios. ¡Gracias por elegirnos!
       </p>
       
