@@ -1,0 +1,185 @@
+/* =========================================================
+   1. ESTILOS DEL BANNER (PARTE SUPERIOR)
+   ========================================================= */
+.banner-banco {
+  background-color: #ffffff;
+  height: auto;                /* Cambiado a auto para que quepa en móviles */
+  min-height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Separa el título de la mascota */
+  padding: 20px 50px;
+  border-bottom: 2px solid #f7bfd8;
+}
+
+.banner-banco h1 {
+  color: #ef98ad;
+  font-size: clamp(1.5rem, 5vw, 2.8rem); /* Tamaño fluido según la pantalla */
+  margin: 0;
+  text-transform: uppercase;
+  font-family: 'Fredoka', sans-serif;
+  letter-spacing: 1px;
+}
+
+/* Estilo para la mascota del banner */
+.mascota-banner {
+  height: 100px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* =========================================================
+   2. CONTENEDOR PRINCIPAL Y DISEÑO (LAYOUT RESPONSIVO)
+   Criterio B-3: Diseño adaptable sin bugs visuales
+   ========================================================= */
+.main-container {
+  display: flex;
+  flex-wrap: wrap;             /* PERMITE QUE LOS ELEMENTOS BAJEN EN MÓVILES */
+  background-color: #fdeaf2;
+  min-height: 100vh;
+}
+
+/* Cada sección toma el 50% en pantallas grandes y 100% en pequeñas */
+.card-section, .form-section {
+  flex: 1 1 500px;             /* Base de 500px antes de pasar a la siguiente fila */
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+/* =========================================================
+   3. VISUALIZACIÓN DE LA TARJETA (TDC)
+   Ajuste de tamaño para que no se estire excesivamente
+   ========================================================= */
+.tarjeta-fisica {
+  width: 100%;
+  max-width: 450px;            /* LIMITA EL ANCHO PARA QUE SE VEA COMO TARJETA REAL */
+  height: 260px;
+  border-radius: 15px;
+  padding: 30px;
+  margin: 0 auto 30px auto;    /* Centra la tarjeta horizontalmente */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+  transition: background 0.5s ease; /* Transición suave de color */
+  position: relative;
+  overflow: hidden;
+}
+
+.logo-tarjeta {
+  width: 100px;
+  height: auto;
+  margin-bottom: 10px;
+}
+
+.nombre-display {
+  font-size: 1.2rem;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+/* Estilos de colores dinámicos según el tipo */
+.Estándar { background-color: #ff4d4d; color: white; }
+.Gold { background-color: #ffd700; color: black; }
+.Platino { 
+  background: linear-gradient(135deg, #e5e4e2 0%, #ffd700 100%); 
+  color: #333;
+}
+
+/* =========================================================
+   4. SELECTOR DE MONTO (SLIDER)
+   Corregido para que ocupe el ancho de la tarjeta
+   ========================================================= */
+.monto-selector {
+  width: 100%;
+  max-width: 450px;            /* Mismo ancho que la tarjeta para armonía visual */
+  margin: 0 auto;
+}
+
+.monto-selector input[type="range"] {
+  width: 100%;                 /* OCUPA TODO EL ANCHO DISPONIBLE DEL CONTENEDOR */
+  margin-top: 15px;
+  accent-color: #ef98ad;       /* Color personalizado para el slider */
+  cursor: pointer;
+}
+
+.rango-labels {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* =========================================================
+   5. SOMBRAS DE GÉNERO Y FORMULARIO
+   ========================================================= */
+.shadow-hombre { box-shadow: 0 0 20px blue; }
+.shadow-mujer { box-shadow: 0 0 20px pink; }
+.shadow-otro { box-shadow: 0 0 20px black; }
+
+.form-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.form-card h2 {
+  font-family: 'Montserrat', sans-serif;
+  color: #000000;
+  font-size: 1.8rem;
+  font-weight: 800;
+  border-bottom: 4px solid #ef98ad;
+  display: inline-block;
+  padding-bottom: 5px;
+  margin-bottom: 25px;
+}
+
+/* Inputs y Selects */
+input[type="text"], 
+input[type="email"],
+select {
+  background-color: #d6abdf;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  padding: 12px;
+  width: 100%;
+  margin-top: 5px;
+  outline: none;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #f7bfd8;
+  background-color: #ffffff;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+  margin-top: 15px;
+  color: #333;
+}
+
+/* =========================================================
+   6. MEDIA QUERIES (PARA MÓVILES)
+   Asegura que el diseño sea responsivo
+   ========================================================= */
+@media (max-width: 768px) {
+  .banner-banco {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .card-section, .form-section {
+    padding: 20px;
+  }
+
+  .tarjeta-fisica {
+    height: 220px;             /* Un poco más pequeña en móviles */
+    padding: 20px;
+  }
+}
